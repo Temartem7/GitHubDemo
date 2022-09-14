@@ -13,6 +13,7 @@ public class BaseClass {
 	
 	@BeforeMethod
 	public void setup() {
+		System.out.println("Setting up Chrome Browser");
 		WebDriverManager.chromedriver().setup();
 		driver=new ChromeDriver();
 		driver.manage().window().maximize();		
@@ -21,6 +22,7 @@ public class BaseClass {
 	
 	@AfterMethod
 	public void tearDown() {
+		System.out.println("Closing the Chrome Browser");
 		driver.close();
 	}
 }
